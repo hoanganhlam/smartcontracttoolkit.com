@@ -1,7 +1,8 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'NFT Toolkit',
+    titleTemplate: '%s | Smart Contract Toolkit | SmartContractToolkit.com',
+    title: 'Smart Contract Toolkit',
     htmlAttrs: {
       lang: 'en'
     },

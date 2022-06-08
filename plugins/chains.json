@@ -5,8 +5,6 @@
     "icon": "ethereum",
     "rpc": [
       "https://cloudflare-eth.com",
-      "https://mainnet.infura.io/v3/${INFURA_API_KEY}",
-      "wss://mainnet.infura.io/ws/v3/${INFURA_API_KEY}",
       "https://api.mycryptoapi.com/eth"
     ],
     "faucets": [],
@@ -50,79 +48,11 @@
     "slip44": 40
   },
   {
-    "name": "Ropsten",
-    "title": "Ethereum Testnet Ropsten",
-    "chain": "ETH",
-    "network": "testnet",
-    "rpc": [
-      "https://ropsten.infura.io/v3/${INFURA_API_KEY}",
-      "wss://ropsten.infura.io/ws/v3/${INFURA_API_KEY}"
-    ],
-    "faucets": [
-      "http://fauceth.komputing.org?chain=3&address=${ADDRESS}",
-      "https://faucet.ropsten.be?${ADDRESS}"
-    ],
-    "nativeCurrency": {
-      "name": "Ropsten Ether",
-      "symbol": "ROP",
-      "decimals": 18
-    },
-    "infoURL": "https://github.com/ethereum/ropsten",
-    "shortName": "rop",
-    "chainId": 3,
-    "networkId": 3,
-    "ens": {
-      "registry": "0x112234455c3a32fd11230c42e7bccd4a84e02010"
-    },
-    "explorers": [
-      {
-        "name": "etherscan",
-        "url": "https://ropsten.etherscan.io",
-        "standard": "EIP3091"
-      }
-    ]
-  },
-  {
-    "name": "Rinkeby",
-    "title": "Ethereum Testnet Rinkeby",
-    "chain": "ETH",
-    "network": "testnet",
-    "rpc": [
-      "https://rinkeby.infura.io/v3/${INFURA_API_KEY}",
-      "wss://rinkeby.infura.io/ws/v3/${INFURA_API_KEY}"
-    ],
-    "faucets": [
-      "http://fauceth.komputing.org?chain=4&address=${ADDRESS}",
-      "https://faucet.rinkeby.io"
-    ],
-    "nativeCurrency": {
-      "name": "Rinkeby Ether",
-      "symbol": "RIN",
-      "decimals": 18
-    },
-    "infoURL": "https://www.rinkeby.io",
-    "shortName": "rin",
-    "chainId": 4,
-    "networkId": 4,
-    "ens": {
-      "registry": "0xe7410170f87102df0055eb195163a03b7f2bff4a"
-    },
-    "explorers": [
-      {
-        "name": "etherscan-rinkeby",
-        "url": "https://rinkeby.etherscan.io",
-        "standard": "EIP3091"
-      }
-    ]
-  },
-  {
     "name": "Görli",
     "title": "Ethereum Testnet Görli",
     "chain": "ETH",
     "network": "testnet",
     "rpc": [
-      "https://goerli.infura.io/v3/${INFURA_API_KEY}",
-      "wss://goerli.infura.io/v3/${INFURA_API_KEY}",
       "https://rpc.goerli.mudit.blog/"
     ],
     "faucets": [
@@ -846,8 +776,6 @@
     "rpc": [
       "https://kovan.poa.network",
       "http://kovan.poa.network:8545",
-      "https://kovan.infura.io/v3/${INFURA_API_KEY}",
-      "wss://kovan.infura.io/ws/v3/${INFURA_API_KEY}",
       "ws://kovan.poa.network:8546"
     ],
     "faucets": [
@@ -7147,8 +7075,6 @@
       "decimals": 18
     },
     "rpc": [
-      "https://arbitrum-mainnet.infura.io/v3/${INFURA_API_KEY}",
-      "https://arb-mainnet.g.alchemy.com/v2/${ALCHEMY_API_KEY}",
       "https://arb1.arbitrum.io/rpc"
     ],
     "faucets": [],
@@ -9795,58 +9721,6 @@
         "name": "OneLedger Block Explorer",
         "url": "https://frankenstein-explorer.oneledger.network",
         "standard": "EIP3091"
-      }
-    ]
-  },
-  {
-    "name": "Palm Testnet",
-    "chain": "Palm",
-    "icon": "palm",
-    "rpc": [
-      "https://palm-testnet.infura.io/v3/${INFURA_API_KEY}"
-    ],
-    "faucets": [],
-    "nativeCurrency": {
-      "name": "PALM",
-      "symbol": "PALM",
-      "decimals": 18
-    },
-    "infoURL": "https://palm.io",
-    "shortName": "tpalm",
-    "chainId": 11297108099,
-    "networkId": 11297108099,
-    "explorers": [
-      {
-        "name": "Palm Testnet Explorer",
-        "url": "https://explorer.palm-uat.xyz",
-        "standard": "EIP3091",
-        "icon": "palm"
-      }
-    ]
-  },
-  {
-    "name": "Palm",
-    "chain": "Palm",
-    "icon": "palm",
-    "rpc": [
-      "https://palm-mainnet.infura.io/v3/${INFURA_API_KEY}"
-    ],
-    "faucets": [],
-    "nativeCurrency": {
-      "name": "PALM",
-      "symbol": "PALM",
-      "decimals": 18
-    },
-    "infoURL": "https://palm.io",
-    "shortName": "palm",
-    "chainId": 11297108109,
-    "networkId": 11297108109,
-    "explorers": [
-      {
-        "name": "Palm Explorer",
-        "url": "https://explorer.palm.io",
-        "standard": "EIP3091",
-        "icon": "palm"
       }
     ]
   },

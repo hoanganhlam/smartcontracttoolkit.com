@@ -1,6 +1,9 @@
 <template>
   <div class="relative" ref="instance">
-    <div class="p-4 rounded py-1 border w-full" @click="active = true">{{ selected ? selected.name : 'Select a chain' }}</div>
+    <div class="p-2 flex space-x-2 border w-full cursor-pointer" @click="active = true">
+      <d-icon name="chain"/>
+      <span>{{ selected ? selected.name : 'Select a chain' }}</span>
+    </div>
     <div v-if="active" class="absolute -top-3 -right-3 -left-3 border bg-white p-3 shadow space-y-3">
       <input class="p-4 rounded py-1 border w-full" v-model="search" type="text" placeholder="Search by a word">
       <div>
@@ -13,9 +16,11 @@
 </template>
 
 <script>
+import DIcon from "./Icon/Icon";
 const dataset = require("../plugins/chains.json")
 export default {
   name: "ChainSelector",
+  components: {DIcon},
   data() {
     return {
       dataset,

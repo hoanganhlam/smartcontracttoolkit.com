@@ -1,14 +1,14 @@
 <template>
   <div>
-    <header class="mb-6 bg-gray-100 py-1">
-      <div class="mx-auto max-w-lg uppercase font-bold py-2">
+    <header class="border-b py-1">
+      <div class="mx-auto max-w-3xl px-4 uppercase font-bold py-2">
         <nuxt-link class="py-2" to="/">Home</nuxt-link>
       </div>
     </header>
-    <main>
+    <main class="py-8">
       <nuxt/>
     </main>
-    <footer class="mt-8 py-4 text-sm text-center">
+    <footer class="py-4 text-xs text-center bg-gray-50 border-t">
       <p class="text-gray-500">© 2022 smartcontracttoolkit.com. All rights reserved.</p>
     </footer>
   </div>
@@ -26,7 +26,7 @@ export default {
       link: [
         {
           rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;500;600;700;800&display=swap'
+          href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap'
         }
       ]
     }
@@ -35,5 +35,7 @@ export default {
 </script>
 
 <style>
-
+main {
+  min-height: calc(100vh - 98px);
+}
 </style>
