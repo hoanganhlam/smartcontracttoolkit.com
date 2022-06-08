@@ -8,7 +8,7 @@
           <p class="text-xl"><b>Smart Contract Toolkit</b> help you work more <span class="px-2 py-0.5 rounded border bg-yellow-50">effectively</span> on blockchain.</p>
         </div>
         <div class="flex-1">
-          <img src="/x.svg" alt="">
+          <img src="/Smart_Contract_Toolkit.svg" alt="Smart Contract Toolkit">
         </div>
       </div>
     </div>
