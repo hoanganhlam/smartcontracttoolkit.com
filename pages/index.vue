@@ -2,7 +2,7 @@
   <div class="px-4 space-y-8">
     <div class="border-b pt-16 pb-32">
       <div class="mx-auto max-w-3xl space-y-10 md:flex items-center md:space-x-6 space-y-6 md:space-y-0">
-        <div class="space-y-3 w-2/3">
+        <div class="space-y-3 md:w-2/3">
           <h2 class="text-5xl font-bold">Smart Contract Toolkit</h2>
           <p class="text-xl">It can also be used as a working tool,</p>
           <p class="text-xl"><b>Smart Contract Toolkit</b> help you work more <span class="px-2 py-0.5 rounded border bg-yellow-50">effectively</span> on blockchain.</p>
