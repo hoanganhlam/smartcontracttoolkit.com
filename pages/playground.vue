@@ -6,7 +6,7 @@
         class="px-2 py-0.5 rounded border bg-yellow-50">smart contract</span> with address and ABI</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="space-y-4">
+      <div class="space-y-4 text-xl">
         <chain-selector ref="selectChain" @select="onSelectChain"/>
         <input class="p-2 border w-full" v-model="address" type="text">
         <div class="flex flex-col space-y-2">

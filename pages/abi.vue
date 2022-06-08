@@ -57,19 +57,19 @@ export default {
         {
           name: "ERC20",
           show: false,
-          uri: 'https://gist.githubusercontent.com/hoanganhlam/a19859ddc6cf82b6b020be8d096ead9d/raw/b44ed0d38566900e5f502aba0dff64682aec5419/ABI-ERC-721.json',
+          uri: 'https://gist.githubusercontent.com/hoanganhlam/362d77a2352c84abfb971e4692061d6c/raw/39159b62337240aeea095899ba186efd2dd56be6/ABI-ERC20.json',
           content: null
         },
         {
           name: "ERC721",
           show: false,
-          uri: 'https://gist.githubusercontent.com/hoanganhlam/a19859ddc6cf82b6b020be8d096ead9d/raw/b44ed0d38566900e5f502aba0dff64682aec5419/ABI-ERC-721.json',
+          uri: 'https://gist.githubusercontent.com/hoanganhlam/0fef79860e992cf3cabf7e8b8fb11ccf/raw/3ba6810ee322bf8a1fa05420159fc292155c339c/ABI-ERC721.json',
           content: null
         },
         {
           name: "ERC1155",
           show: false,
-          uri: 'https://gist.githubusercontent.com/hoanganhlam/a19859ddc6cf82b6b020be8d096ead9d/raw/b44ed0d38566900e5f502aba0dff64682aec5419/ABI-ERC-721.json',
+          uri: 'https://gist.githubusercontent.com/hoanganhlam/96c9012eb45f3c5b55592e53979727d9/raw/892627810d058e1d5cfedd366040b9244386c02f/ABI-ERC1155.json',
           content: null
         },
       ]
