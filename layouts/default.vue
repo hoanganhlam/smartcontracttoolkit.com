@@ -30,6 +30,11 @@ export default {
         }
       ]
     }
+  },
+  watch: {
+    "$store.state.ABI"() {
+      console.log(this.$store.state.ABI);
+    }
   }
 }
 </script>
