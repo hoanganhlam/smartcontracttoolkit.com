@@ -1,12 +1,12 @@
 <template>
   <div class="mx-auto max-w-3xl px-4 space-y-8">
     <div class="space-y-2">
-      <h1 class="font-semibold text-4xl">Smart Contract Playground</h1>
+      <h1 class="font-semibold text-3xl md:text-5xl">Smart Contract Playground</h1>
       <p class="text-xl">Easy way to read any <span
         class="px-2 py-0.5 rounded border bg-yellow-50">smart contract</span> with address and ABI</p>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="space-y-4 text-xl">
+    <div class="grid grid-cols-1 gap-6 text-lg">
+      <div class="space-y-4">
         <chain-selector ref="selectChain" @select="onSelectChain"/>
         <input class="p-2 border w-full" v-model="address" type="text">
         <div class="flex flex-col space-y-2">
@@ -27,10 +27,10 @@
         </div>
         <div class="rounded p-4 w-full text-white font-bold bg-blue-400 cursor-pointer text-center" @click="load()">Process</div>
       </div>
-      <div class="space-y-4">
+      <div class="grid grid-cols-2 gap-3">
         <div class="border p-3 bg-gray-100 space-y-2" v-for="item in methods">
-          <div class="flex space-x-1 items-center">
-            <h4 class="text-xs uppercase font-bold">{{ item.name }}</h4>
+          <div class="text-xs flex space-x-1 items-center">
+            <h4 class="uppercase font-bold">{{ item.name }}</h4>
             <span>(</span>
             <div v-if="item.inputs.length" class="flex space-x-1 text-xs text-gray-500 items-center">
               <span
