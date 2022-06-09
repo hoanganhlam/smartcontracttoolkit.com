@@ -6,28 +6,7 @@
         <p class="text-xl w-2/3 mx-auto">Find and download ABI for your projects.</p>
       </div>
       <div class="space-y-4">
-        <div
-          v-for="item in items" :key="item.name"
-          class="rounded cursor-pointer hover:shadow-xl shadow duration-200"
-        >
-          <div class="flex justify-between items-center p-4">
-            <div class="font-bold text-xl cursor-pointer flex space-x-2" @click="item.show = !item.show">
-              <d-icon :name="item.show ? 'collapse': 'expand'"></d-icon>
-              <span>{{ item.name }}</span>
-            </div>
-            <div class="flex space-x-4">
-              <div class="cursor-pointer">
-                <d-icon name="copy"></d-icon>
-              </div>
-              <a :href="item.uri" download>
-                <d-icon name="download"></d-icon>
-              </a>
-            </div>
-          </div>
-          <div v-if="item.show" class="p-4 border-t max-h-64 overflow-y-auto">
-            <pre>{{ item.schemas }}</pre>
-          </div>
-        </div>
+        <abi-viewer v-for="item in items" :key="item.name" :value="item"/>
       </div>
     </div>
   </div>
@@ -36,10 +15,11 @@
 <script>
 import DIcon from "../components/Icon/Icon";
 import {cloneDeep} from "lodash"
+import ABIViewer from "../components/ABIViewer";
 
 export default {
   name: "AbiApp",
-  components: {DIcon},
+  components: {'abi-viewer': ABIViewer, DIcon},
   head() {
     const title = "ABI Downloads | ERC20 | ERC 721 | ERC1155"
     const desc = "Find and download ABI for your projects. Currently, supported ERC20, ERC721 and ERC1155"

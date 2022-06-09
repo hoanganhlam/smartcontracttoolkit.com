@@ -23,11 +23,15 @@ const ABI = {
 }
 export default {
   state: () => ({
-    ABI: {}
+    ABI: {},
+    CHAIN_LIST: []
   }),
   mutations: {
     'SET_ABI'(state, data) {
       state.ABI = data
+    },
+    'SET_CHAIN_LIST'(state, data) {
+      state.CHAIN_LIST = data
     },
     'ADD_ABI'(state, {key, abi}) {
       state.ABI[key] = abi
@@ -41,11 +45,15 @@ export default {
           this.$axios.$get(ABI[item].uri)
         )
       })
+      inters.push(
+        this.$axios.$get('https://gist.githubusercontent.com/comficker/9803dc8419ec0a46b8046d73630fe8ac/raw/07a2d06e7e157f5be0cd0331019f807eee3b93b3/chain_list.json')
+      )
       const res = await Promise.all(inters)
       ABI["ERC20"].schemas = res[0]
       ABI["ERC721"].schemas = res[1]
       ABI["ERC1155"].schemas = res[2]
       commit('SET_ABI', ABI)
+      commit('SET_CHAIN_LIST', res[3])
     },
   },
 }

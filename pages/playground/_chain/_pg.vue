@@ -1,9 +1,9 @@
 <template>
   <div class="mx-auto max-w-3xl px-4 space-y-8">
     <div class="space-y-2">
-      <h1 class="font-semibold text-3xl md:text-5xl">Smart Contract Playground</h1>
+      <h1 class="font-semibold text-3xl md:text-5xl">{{ name }} Playground</h1>
       <p class="text-xl">Easy way to read any <span
-        class="px-2 py-0.5 rounded border bg-yellow-50">smart contract</span> with address and ABI</p>
+        class="px-2 py-0.5 rounded border bg-yellow-50">{{ name }}</span> with address and ABI</p>
     </div>
     <div class="grid grid-cols-1 gap-6 text-lg">
       <div class="space-y-4">
@@ -25,9 +25,11 @@
             </label>
           </div>
         </div>
-        <div class="rounded p-4 w-full text-white font-bold bg-blue-400 cursor-pointer text-center" @click="load()">Process</div>
+        <div class="rounded p-4 w-full text-white font-bold bg-blue-400 cursor-pointer text-center" @click="load()">
+          Process
+        </div>
       </div>
-      <div class="grid grid-cols-2 gap-3">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
         <div class="border p-3 bg-gray-100 space-y-2" v-for="item in methods">
           <div class="text-xs flex space-x-1 items-center">
             <h4 class="uppercase font-bold">{{ item.name }}</h4>
@@ -40,9 +42,19 @@
             </div>
             <span>)</span>
           </div>
-          <div class="p-2 border text-xs font-mono bg-white">
+          <div class="p-2 border bg-white overflow-auto">
             <span v-if="output[item.name]">{{ output[item.name] }}</span>
             <span v-else class="text-gray-500">Please input</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="border p-3">
+        <h2 class="uppercase font-bold mb-2 text-xs">Supported chains</h2>
+        <div class="flex -mx-1 flex-wrap text-xs">
+          <div v-for="item in $store.state.CHAIN_LIST" :key="item.shortName" class="p-2 px-1 block">
+            <nuxt-link class="bg-gray-50 border p-1 px-2 rounded" :to="`/playground/${item.shortName}`">{{ item.name }}</nuxt-link>
           </div>
         </div>
       </div>
@@ -54,12 +66,13 @@
 import Web3 from "web3";
 import ChainSelector from "../../../components/ChainSelector";
 import DIcon from "../../../components/Icon/Icon";
+
 export default {
   name: 'IndexPage',
   components: {DIcon, ChainSelector},
   head() {
     const desc = "Easy way to read any smart contract with address and ABI"
-    const title = "Smart Contract Playground | SmartContractToolkit.com"
+    const title = `${this.name} Playground | SmartContractToolkit.com`
     return {
       title: title,
       meta: [
@@ -71,6 +84,7 @@ export default {
   },
   data() {
     return {
+      name: 'Smart Contract',
       address: "0xb7F7c7D91Ede27b019e265F8ba04c63333991e02",
       activeABI: 'ERC20',
       input: {},
@@ -81,18 +95,6 @@ export default {
         "chain": "BSC",
         "rpc": [
           "https://bsc-dataseed1.binance.org",
-          "https://bsc-dataseed2.binance.org",
-          "https://bsc-dataseed3.binance.org",
-          "https://bsc-dataseed4.binance.org",
-          "https://bsc-dataseed1.defibit.io",
-          "https://bsc-dataseed2.defibit.io",
-          "https://bsc-dataseed3.defibit.io",
-          "https://bsc-dataseed4.defibit.io",
-          "https://bsc-dataseed1.ninicoin.io",
-          "https://bsc-dataseed2.ninicoin.io",
-          "https://bsc-dataseed3.ninicoin.io",
-          "https://bsc-dataseed4.ninicoin.io",
-          "wss://bsc-ws-node.nariox.org"
         ],
         "faucets": [
           "https://free-online-app.com/faucet-for-eth-evm-chains/"
@@ -201,6 +203,15 @@ export default {
   },
   mounted() {
     this.createInput()
+  },
+  created() {
+    if (this.$route.params.chain) {
+      const arr = this.$store.state.CHAIN_LIST.filter(x => x.shortName === this.$route.params.chain.toLowerCase())
+      if (arr.length) {
+        this.activeChain = arr[0]
+        this.name = this.activeChain.name
+      }
+    }
   }
 }
 </script>

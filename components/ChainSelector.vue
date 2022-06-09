@@ -17,19 +17,20 @@
 
 <script>
 import DIcon from "./Icon/Icon";
-const dataset = require("../plugins/chains.json")
 export default {
   name: "ChainSelector",
   components: {DIcon},
   data() {
     return {
-      dataset,
       search: null,
       selected: null,
       active: false
     }
   },
   computed: {
+    dataset() {
+      return this.$store.state.CHAIN_LIST
+    },
     shown() {
       return this.dataset.filter(x => {
         if (!this.search) return true;
