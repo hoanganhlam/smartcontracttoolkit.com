@@ -23,7 +23,7 @@ export default {
   name: "AbiApp",
   components: {AppList, 'abi-viewer': ABIViewer, DIcon},
   head() {
-    const title = "ABI Downloads | ERC20 | ERC 721 | ERC1155"
+    const title = "ABI ERC20 | ERC 721 | ERC1155 Downloads"
     const desc = "Find and download ABI for your projects. Currently, supported ERC20, ERC721 and ERC1155"
     return {
       title: title,
