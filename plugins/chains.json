@@ -10,19 +10,7 @@
     "name": "Binance Smart Chain Mainnet",
     "chain": "BSC",
     "rpc": [
-      "https://bsc-dataseed1.binance.org",
-      "https://bsc-dataseed2.binance.org",
-      "https://bsc-dataseed3.binance.org",
-      "https://bsc-dataseed4.binance.org",
-      "https://bsc-dataseed1.defibit.io",
-      "https://bsc-dataseed2.defibit.io",
-      "https://bsc-dataseed3.defibit.io",
-      "https://bsc-dataseed4.defibit.io",
-      "https://bsc-dataseed1.ninicoin.io",
-      "https://bsc-dataseed2.ninicoin.io",
-      "https://bsc-dataseed3.ninicoin.io",
-      "https://bsc-dataseed4.ninicoin.io",
-      "wss://bsc-ws-node.nariox.org"
+      "https://bsc-dataseed1.binance.org"
     ],
     "faucets": [
       "https://free-online-app.com/faucet-for-eth-evm-chains/"
@@ -55,12 +43,7 @@
   {
     "name": "Polygon Mainnet",
     "rpc": [
-      "https://polygon-rpc.com/",
-      "https://rpc-mainnet.matic.network",
-      "https://matic-mainnet.chainstacklabs.com",
-      "https://rpc-mainnet.maticvigil.com",
-      "https://rpc-mainnet.matic.quiknode.pro",
-      "https://matic-mainnet-full-rpc.bwarelabs.com"
+      "https://polygon-rpc.com/"
     ],
     "shortName": "polygon-mainnet"
   },
@@ -118,6 +101,6 @@
     "rpc": [
       "https://testnet.aurora.dev/"
     ],
-    "shortName": "aurora-testnet",
+    "shortName": "aurora-testnet"
   }
 ]
