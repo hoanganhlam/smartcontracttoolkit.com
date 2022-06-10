@@ -1,7 +1,7 @@
 const ABI = {
   ERC20: {
     name: "ERC20",
-    show: false,
+    show: true,
     uri: 'https://gist.githubusercontent.com/hoanganhlam/362d77a2352c84abfb971e4692061d6c/raw/39159b62337240aeea095899ba186efd2dd56be6/ABI-ERC20.json',
     content: null,
     schemas: []
@@ -34,7 +34,6 @@ export default {
       state.CHAIN_LIST = data
     },
     'ADD_ABI'(state, {key, abi}) {
-      abi.show = key === 'ERC20';
       state.ABI[key] = abi
     },
   },

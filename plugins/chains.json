@@ -1,0 +1,123 @@
+[
+  {
+    "name": "Ethereum Mainnet",
+    "rpc": [
+      "https://cloudflare-eth.com"
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "Binance Smart Chain Mainnet",
+    "chain": "BSC",
+    "rpc": [
+      "https://bsc-dataseed1.binance.org",
+      "https://bsc-dataseed2.binance.org",
+      "https://bsc-dataseed3.binance.org",
+      "https://bsc-dataseed4.binance.org",
+      "https://bsc-dataseed1.defibit.io",
+      "https://bsc-dataseed2.defibit.io",
+      "https://bsc-dataseed3.defibit.io",
+      "https://bsc-dataseed4.defibit.io",
+      "https://bsc-dataseed1.ninicoin.io",
+      "https://bsc-dataseed2.ninicoin.io",
+      "https://bsc-dataseed3.ninicoin.io",
+      "https://bsc-dataseed4.ninicoin.io",
+      "wss://bsc-ws-node.nariox.org"
+    ],
+    "faucets": [
+      "https://free-online-app.com/faucet-for-eth-evm-chains/"
+    ],
+    "nativeCurrency": {
+      "name": "Binance Chain Native Token",
+      "symbol": "BNB",
+      "decimals": 18
+    },
+    "infoURL": "https://www.binance.org",
+    "shortName": "bnb",
+    "chainId": 56,
+    "networkId": 56,
+    "slip44": 714,
+    "explorers": [
+      {
+        "name": "bscscan",
+        "url": "https://bscscan.com",
+        "standard": "EIP3091"
+      }
+    ]
+  },
+  {
+    "name": "Binance Smart Chain Testnet",
+    "rpc": [
+      "https://data-seed-prebsc-1-s1.binance.org:8545"
+    ],
+    "shortName": "bsc-testnet"
+  },
+  {
+    "name": "Polygon Mainnet",
+    "rpc": [
+      "https://polygon-rpc.com/",
+      "https://rpc-mainnet.matic.network",
+      "https://matic-mainnet.chainstacklabs.com",
+      "https://rpc-mainnet.maticvigil.com",
+      "https://rpc-mainnet.matic.quiknode.pro",
+      "https://matic-mainnet-full-rpc.bwarelabs.com"
+    ],
+    "shortName": "polygon-mainnet"
+  },
+  {
+    "name": "Fantom Opera",
+    "rpc": [
+      "https://rpc.ftm.tools"
+    ],
+    "shortName": "fantom-opera"
+  },
+  {
+    "name": "Fantom Testnet",
+    "rpc": [
+      "https://rpc.testnet.fantom.network"
+    ],
+    "shortName": "fantom-testnet"
+  },
+  {
+    "name": "Celo Mainnet",
+    "rpc": [
+      "https://forno.celo.org"
+    ],
+    "shortName": "celo-mainnet"
+  },
+  {
+    "name": "Celo Baklava Testnet",
+    "shortName": "celo-bklava",
+    "rpc": [
+      "https://baklava-forno.celo-testnet.org"
+    ]
+  },
+  {
+    "name": "Avalanche C-Chain",
+    "rpc": [
+      "https://api.avax.network/ext/bc/C/rpc"
+    ],
+    "shortName": "avalanche"
+  },
+  {
+    "name": "Avalanche Fuji Testnet",
+    "rpc": [
+      "https://api.avax-test.network/ext/bc/C/rpc"
+    ],
+    "shortName": "avalanche-fuji"
+  },
+  {
+    "name": "Aurora Mainnet",
+    "rpc": [
+      "https://mainnet.aurora.dev"
+    ],
+    "shortName": "aurora-mainnet"
+  },
+  {
+    "name": "Aurora Testnet",
+    "rpc": [
+      "https://testnet.aurora.dev/"
+    ],
+    "shortName": "aurora-testnet",
+  }
+]
