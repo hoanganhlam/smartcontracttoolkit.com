@@ -10,7 +10,6 @@ export default {
   },
   actions: {
     nuxtServerInit ({ commit }, { req }) {
-      console.log("A");
       if (req.session.user) {
         commit('user', req.session.user)
       }

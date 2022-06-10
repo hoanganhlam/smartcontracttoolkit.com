@@ -34,6 +34,7 @@ export default {
       state.CHAIN_LIST = data
     },
     'ADD_ABI'(state, {key, abi}) {
+      abi.show = key === 'ERC20';
       state.ABI[key] = abi
     },
   },
