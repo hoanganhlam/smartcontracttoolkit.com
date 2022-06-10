@@ -18,43 +18,51 @@
       </div>
     </div>
     <div v-if="is_show" class="p-4 border-t space-y-3">
-      <div class="flex space-x-4 flex-wrap">
-        <div class="flex items-center">
-          <input
-            id="count-method"
-            type="checkbox"
-            v-model="filter.method"
-            class="check-box">
-          <label for="count-method" class="ml-2 text-sm font-medium">Method</label>
-          <span class="ml-1 text-gray-400">({{ countFunction }})</span>
+      <div class="flex -mx-2 flex-wrap">
+        <div class="p-2">
+          <div class="flex items-center">
+            <input
+              id="count-method"
+              type="checkbox"
+              v-model="filter.method"
+              class="check-box">
+            <label for="count-method" class="ml-2 text-sm font-medium">Method</label>
+            <span class="ml-1 text-gray-400">({{ countFunction }})</span>
+          </div>
         </div>
-        <div class="flex items-center">
-          <input
-            id="count-event"
-            type="checkbox"
-            v-model="filter.event"
-            class="check-box">
-          <label for="count-event" class="ml-2 text-sm font-medium">Event</label>
-          <span class="ml-1 text-gray-400">({{ countEvent }})</span>
+        <div class="p-2">
+          <div class="flex items-center">
+            <input
+              id="count-event"
+              type="checkbox"
+              v-model="filter.event"
+              class="check-box">
+            <label for="count-event" class="ml-2 text-sm font-medium">Event</label>
+            <span class="ml-1 text-gray-400">({{ countEvent }})</span>
+          </div>
         </div>
         <template v-if="filter.method">
-          <div class="flex items-center">
-            <input
-              id="count-view"
-              type="checkbox"
-              v-model="filter.read"
-              class="check-box">
-            <label for="count-view" class="ml-2 text-sm font-medium">Read</label>
-            <span class="ml-1 text-gray-400">({{ countView }})</span>
+          <div class="p-2">
+            <div class="flex items-center">
+              <input
+                id="count-view"
+                type="checkbox"
+                v-model="filter.read"
+                class="check-box">
+              <label for="count-view" class="ml-2 text-sm font-medium">Read</label>
+              <span class="ml-1 text-gray-400">({{ countView }})</span>
+            </div>
           </div>
-          <div class="flex items-center">
-            <input
-              id="count-write"
-              type="checkbox"
-              v-model="filter.write"
-              class="check-box">
-            <label for="count-write" class="ml-2 text-sm font-medium">Write</label>
-            <span class="ml-1 text-gray-400">({{ countWrite }})</span>
+          <div class="p-2">
+            <div class="flex items-center">
+              <input
+                id="count-write"
+                type="checkbox"
+                v-model="filter.write"
+                class="check-box">
+              <label for="count-write" class="ml-2 text-sm font-medium">Write</label>
+              <span class="ml-1 text-gray-400">({{ countWrite }})</span>
+            </div>
           </div>
         </template>
       </div>

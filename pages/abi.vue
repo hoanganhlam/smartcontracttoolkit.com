@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto max-w-3xl px-4 space-y-8">
+  <div class="mx-auto max-w-3xl space-y-8">
     <div class="space-y-10">
       <div class="space-y-3 text-center">
         <h2 class="text-4xl font-semibold">ABI Downloads</h2>
@@ -8,6 +8,7 @@
       <div class="space-y-4">
         <abi-viewer v-for="item in items" :key="item.name" :value="item"/>
       </div>
+      <app-list/>
     </div>
   </div>
 </template>
@@ -16,10 +17,11 @@
 import DIcon from "../components/Icon/Icon";
 import {cloneDeep} from "lodash"
 import ABIViewer from "../components/ABIViewer";
+import AppList from "../components/AppList";
 
 export default {
   name: "AbiApp",
-  components: {'abi-viewer': ABIViewer, DIcon},
+  components: {AppList, 'abi-viewer': ABIViewer, DIcon},
   head() {
     const title = "ABI Downloads | ERC20 | ERC 721 | ERC1155"
     const desc = "Find and download ABI for your projects. Currently, supported ERC20, ERC721 and ERC1155"

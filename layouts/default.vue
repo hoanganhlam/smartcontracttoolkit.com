@@ -1,11 +1,11 @@
 <template>
   <div>
-    <header class="border-b py-1">
-      <div class="mx-auto max-w-3xl px-4 uppercase font-bold py-2">
+    <header class="border-b py-1 px-4">
+      <div class="mx-auto max-w-3xl uppercase font-bold py-2">
         <nuxt-link class="py-2" to="/">Home</nuxt-link>
       </div>
     </header>
-    <main class="py-8">
+    <main class="py-8 px-4">
       <nuxt/>
     </main>
     <footer class="py-4 text-xs text-center bg-gray-50 border-t">

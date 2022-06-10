@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto max-w-3xl px-4 space-y-8">
+  <div class="mx-auto max-w-3xl space-y-8">
     <div class="space-y-2">
       <h1 class="font-semibold text-3xl md:text-5xl">{{ name }} Playground</h1>
       <p class="text-xl">Easy way to read any <span
@@ -19,11 +19,10 @@
           <option v-for="key in Object.keys(ABI)" :key="key" :value="key">{{ key }}</option>
         </select>
         <div class="p-1 border">
-          <input ref="inputFile" type="file" @change="previewFiles" placeholder="Choose your ABI"/>
+          <input class="w-full" ref="inputFile" type="file" @change="previewFiles" placeholder="Choose your ABI"/>
         </div>
       </div>
     </div>
-    <hr class="border-dashed">
     <div class="grid grid-cols-1 gap-6 text-lg">
       <div class="space-y-2">
         <h2 class="uppercase font-bold text-xs">Inputs</h2>
@@ -73,6 +72,7 @@
         </div>
       </div>
     </div>
+    <app-list/>
   </div>
 </template>
 
@@ -80,10 +80,11 @@
 import Web3 from "web3";
 import ChainSelector from "../../../components/ChainSelector";
 import DIcon from "../../../components/Icon/Icon";
+import AppList from "../../../components/AppList";
 
 export default {
   name: 'IndexPage',
-  components: {DIcon, ChainSelector},
+  components: {AppList, DIcon, ChainSelector},
   head() {
     const desc = "Easy way to read any smart contract with address and ABI"
     const title = `${this.name} Playground | SmartContractToolkit.com`
