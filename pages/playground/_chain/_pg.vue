@@ -30,7 +30,7 @@
         </div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-        <div class="border p-3 bg-gray-100 space-y-2" v-for="item in methods">
+        <div class="space-y-2" v-for="item in methods">
           <div class="text-xs flex space-x-1 items-center">
             <h4 class="uppercase font-bold">{{ item.name }}</h4>
             <span>(</span>
