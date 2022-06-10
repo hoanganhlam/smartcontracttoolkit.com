@@ -9,7 +9,7 @@ const ABI = {
   ERC721: {
     name: "ERC721",
     show: false,
-    uri: 'https://gist.githubusercontent.com/hoanganhlam/0fef79860e992cf3cabf7e8b8fb11ccf/raw/3ba6810ee322bf8a1fa05420159fc292155c339c/ABI-ERC721.json',
+    uri: 'https://gist.githubusercontent.com/hoanganhlam/0fef79860e992cf3cabf7e8b8fb11ccf/raw/8175a9d95c6bb19e76c33b21c6131f1d45d1bc86/ABI-ERC721.json',
     content: null,
     schemas: []
   },
@@ -46,7 +46,7 @@ export default {
         )
       })
       inters.push(
-        this.$axios.$get('https://gist.githubusercontent.com/comficker/9803dc8419ec0a46b8046d73630fe8ac/raw/07a2d06e7e157f5be0cd0331019f807eee3b93b3/chain_list.json')
+        this.$axios.$get('https://gist.githubusercontent.com/comficker/9803dc8419ec0a46b8046d73630fe8ac/raw/2c6b49f2d5b8d82e0246fe46849f96facf5199fe/chain_list.json')
       )
       const res = await Promise.all(inters)
       ABI["ERC20"].schemas = res[0]
