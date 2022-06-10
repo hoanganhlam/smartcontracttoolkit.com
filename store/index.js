@@ -46,7 +46,7 @@ export default {
         )
       })
       inters.push(
-        this.$axios.$get('https://gist.githubusercontent.com/comficker/9803dc8419ec0a46b8046d73630fe8ac/raw/2c6b49f2d5b8d82e0246fe46849f96facf5199fe/chain_list.json')
+        this.$axios.$get('https://gist.githubusercontent.com/comficker/9803dc8419ec0a46b8046d73630fe8ac/raw/ac84b1de2caf3193fb1a06403f445f805f0aa3e8/chain_list.json')
       )
       const res = await Promise.all(inters)
       ABI["ERC20"].schemas = res[0]
