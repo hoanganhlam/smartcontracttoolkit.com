@@ -4,34 +4,14 @@
     "rpc": [
       "https://cloudflare-eth.com"
     ],
-    "chainId": 1
+    "shortName": "ethereum-mainnet"
   },
   {
     "name": "Binance Smart Chain Mainnet",
-    "chain": "BSC",
     "rpc": [
       "https://bsc-dataseed1.binance.org"
     ],
-    "faucets": [
-      "https://free-online-app.com/faucet-for-eth-evm-chains/"
-    ],
-    "nativeCurrency": {
-      "name": "Binance Chain Native Token",
-      "symbol": "BNB",
-      "decimals": 18
-    },
-    "infoURL": "https://www.binance.org",
-    "shortName": "bnb",
-    "chainId": 56,
-    "networkId": 56,
-    "slip44": 714,
-    "explorers": [
-      {
-        "name": "bscscan",
-        "url": "https://bscscan.com",
-        "standard": "EIP3091"
-      }
-    ]
+    "shortName": "bsc-mainnet"
   },
   {
     "name": "Binance Smart Chain Testnet",
