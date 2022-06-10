@@ -18,7 +18,7 @@
       </div>
     </div>
     <div v-if="is_show" class="p-4 border-t space-y-3">
-      <div class="flex space-x-4">
+      <div class="flex space-x-4 flex-wrap">
         <div class="flex items-center">
           <input
             id="count-method"

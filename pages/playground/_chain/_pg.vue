@@ -6,7 +6,7 @@
         class="px-2 py-0.5 rounded border bg-yellow-50">{{ name }}</span> with address and ABI</p>
     </div>
     <div class="space-y-4 text-lg">
-      <div class="grid grid-cols-2 gap-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
           <chain-selector ref="selectChain" @select="onSelectChain"/>
         </div>
@@ -14,7 +14,7 @@
           <input class="p-2 border w-full" v-model="address" type="text">
         </div>
       </div>
-      <div class="grid grid-cols-2 gap-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <select class="bg-white p-2 border w-full" v-model="activeABI">
           <option v-for="key in Object.keys(ABI)" :key="key" :value="key">{{ key }}</option>
         </select>
