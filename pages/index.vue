@@ -1,6 +1,6 @@
 <template>
   <div class="space-y-8">
-    <div class="border-b pb-8 md:pt-16 md:pb-32">
+    <div class="border-b pb-8 md:pt-16 md:pb-32 px-4">
       <div class="mx-auto max-w-3xl space-y-10 md:flex items-center md:space-x-6 space-y-6 md:space-y-0">
         <div class="space-y-3 md:w-2/3">
           <h2 class="text-5xl font-bold">Smart Contract Toolkit</h2>
@@ -12,7 +12,7 @@
         </div>
       </div>
     </div>
-    <div class="mx-auto max-w-3xl space-y-10">
+    <div class="mx-auto max-w-3xl space-y-10 px-4">
       <div class="space-y-3 text-center">
         <h2 class="text-3xl font-semibold">Explore</h2>
         <p class="text-xl md:w-2/3 mx-auto">Check out free apps that help you explore and create contract easiest.</p>

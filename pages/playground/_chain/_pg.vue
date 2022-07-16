@@ -1,78 +1,84 @@
 <template>
-  <div class="mx-auto max-w-3xl space-y-8">
-    <div class="space-y-2">
-      <h1 class="font-semibold text-3xl md:text-5xl">{{ name }} Playground</h1>
-      <p class="text-xl">Easy way to read any <span
-        class="px-2 py-0.5 rounded border bg-yellow-50">{{ name }}</span> with address and ABI</p>
-    </div>
-    <div class="space-y-4 text-lg">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div>
-          <chain-selector ref="selectChain" @select="onSelectChain"/>
-        </div>
-        <div>
-          <input class="p-2 border w-full" v-model="address" type="text">
-        </div>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <select class="bg-white p-2 border w-full" v-model="activeABI">
-          <option v-for="key in Object.keys(ABI)" :key="key" :value="key">{{ key }}</option>
-        </select>
-        <div class="p-1 border">
-          <input class="w-full" ref="inputFile" type="file" @change="previewFiles" placeholder="Choose your ABI"/>
-        </div>
-      </div>
-    </div>
-    <div class="grid grid-cols-1 gap-6 text-lg">
+  <div>
+    <div class="mx-auto max-w-3xl space-y-8 px-4">
       <div class="space-y-2">
-        <h2 class="uppercase font-bold text-xs">Inputs</h2>
-        <div class="space-y-4">
-          <div v-for="item in Object.keys(input)">
-            <label
-              class="flex p-2 space-x-2 items-center border w-full bg-white">
-              <span class="bg-yellow-600 p-1 px-2 rounded text-xs text-white">{{ item }}</span>
-              <input class="flex-1 outline-none" v-model="input[item]" type="text">
-            </label>
+        <h1 class="font-semibold text-5xl">{{ name }} Playground</h1>
+        <p class="text-xl">Easy way to read any <span
+          class="px-2 py-0.5 rounded border bg-yellow-50">{{ name }}</span> with address and ABI</p>
+      </div>
+      <div class="space-y-4 text-lg">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <chain-selector ref="selectChain" @select="onSelectChain"/>
           </div>
-          <div class="rounded p-4 w-full text-white font-bold bg-blue-400 cursor-pointer text-center" @click="load()">
-            Process
+          <div>
+            <input class="p-2 border w-full" v-model="address" type="text">
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <select class="bg-white p-2 border w-full" v-model="activeABI">
+            <option v-for="key in Object.keys(ABI)" :key="key" :value="key">{{ key }}</option>
+          </select>
+          <div class="p-1 border">
+            <input class="w-full" ref="inputFile" type="file" @change="previewFiles" placeholder="Choose your ABI"/>
           </div>
         </div>
       </div>
-      <div class="space-y-2">
-        <h2 class="uppercase font-bold text-xs">Results</h2>
-        <div class="grid grid-cols-1 gap-3">
-          <div class="space-y-2" v-for="item in methods">
-            <div class="text-xs flex space-x-1 items-center">
-              <h4 class="uppercase font-bold">{{ item.name }}</h4>
-              <span>(</span>
-              <div v-if="item.inputs.length" class="flex space-x-1 text-xs text-gray-500 items-center">
+      <div class="grid grid-cols-1 gap-6 text-lg">
+        <div class="space-y-2">
+          <h2 class="uppercase font-bold text-xs">Inputs</h2>
+          <div class="grid grid-cols-2 gap-4">
+            <div v-for="item in Object.keys(input)">
+              <label
+                class="flex p-2 space-x-2 items-center border w-full bg-white">
+                <span class="bg-yellow-600 p-1 px-2 rounded text-xs text-white">{{ item }}</span>
+                <input class="flex-1 outline-none w-full" v-model="input[item]" type="text">
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="rounded p-4 w-full text-white font-bold bg-blue-400 cursor-pointer text-center" @click="load()">
+          Process
+        </div>
+        <div class="space-y-2">
+          <h2 class="uppercase font-bold text-xs">Results</h2>
+          <div class="grid grid-cols-1 gap-3">
+            <div class="space-y-2" v-for="item in methods">
+              <div class="text-xs flex space-x-1 items-center">
+                <d-icon name="right"/>
+                <h4 class="uppercase font-bold">{{ item.name }}</h4>
+                <span>(</span>
+                <div v-if="item.inputs.length" class="flex space-x-1 text-xs text-gray-500 items-center">
               <span
                 v-for="inputItem in item.inputs" :key="inputItem.name"
                 class="flex px-1 border bg-yellow-50 rounded"
               >{{ inputItem.name }}</span>
+                </div>
+                <span>)</span>
               </div>
-              <span>)</span>
-            </div>
-            <div class="p-2 border bg-white overflow-auto border-dashed">
-              <span v-if="output[item.name]">{{ output[item.name] }}</span>
-              <span v-else class="text-gray-300">Please input</span>
+              <div v-if="output[item.name]" class="p-2 border bg-white overflow-auto border-dashed">
+                <span>{{ output[item.name] }}</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div>
-      <div class="border p-3">
+    <hr class="my-8">
+    <div class="mx-auto max-w-3xl space-y-8 px-4">
+      <div>
         <h2 class="uppercase font-bold mb-2 text-xs">Supported chains</h2>
         <div class="flex -mx-1 flex-wrap text-xs h-16 overflow-auto">
           <div v-for="item in $store.state.CHAIN_LIST" :key="item.shortName" class="p-2 px-1 block">
-            <nuxt-link class="bg-gray-50 border p-1 px-2 rounded" :to="`/playground/${item.shortName}`">{{ item.name }}</nuxt-link>
+            <nuxt-link class="bg-gray-50 border p-1 px-2 rounded" :to="`/playground/${item.shortName}`">{{
+                item.name
+              }}
+            </nuxt-link>
           </div>
         </div>
       </div>
+      <app-list/>
     </div>
-    <app-list/>
   </div>
 </template>
 

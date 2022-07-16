@@ -5,7 +5,7 @@
         <nuxt-link class="py-2" to="/">Home</nuxt-link>
       </div>
     </header>
-    <main class="py-8 px-4">
+    <main class="py-8">
       <nuxt/>
     </main>
     <footer class="py-4 text-xs text-center bg-gray-50 border-t">

@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto max-w-3xl space-y-8">
+  <div class="mx-auto max-w-3xl space-y-8 px-4">
     <div class="space-y-10">
       <div class="space-y-3 text-center">
         <h2 class="text-4xl font-semibold">ABI Downloads</h2>
